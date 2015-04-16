@@ -1,0 +1,21 @@
+h1 Listing all the things: p3s
+
+table
+  thead
+    tr
+      th Title
+      th
+      th
+      th
+
+  tbody
+    - @p3s.each do |p3|
+      tr
+        td = p3.title
+        td = link_to 'Show', p3
+        td = link_to 'Edit', edit_p3_path(p3)
+        td = link_to 'Destroy', p3, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New P3', new_p3_path

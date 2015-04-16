@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @p3.title
+
+= link_to 'Edit', edit_p3_path(@p3)
+'|
+= link_to 'Back', p3s_path
