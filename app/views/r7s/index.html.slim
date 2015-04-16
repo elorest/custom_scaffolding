@@ -1,0 +1,21 @@
+h1 Listing all the things: r7s
+
+table
+  thead
+    tr
+      th Title
+      th
+      th
+      th
+
+  tbody
+    - @r7s.each do |r7|
+      tr
+        td = r7.title
+        td = link_to 'Show', r7
+        td = link_to 'Edit', edit_r7_path(r7)
+        td = link_to 'Destroy', r7, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New R7', new_r7_path

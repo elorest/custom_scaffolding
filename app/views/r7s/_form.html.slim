@@ -1,0 +1,12 @@
+= form_for @r7 do |f|
+  - if @r7.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@r7.errors.count, "error")} prohibited this r7 from being saved:"
+      ul
+        - @r7.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .actions = f.submit

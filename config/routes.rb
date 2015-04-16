@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :r7s
+
   resources :p3s
 
   resources :p2s
