@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :urugs
+
   resources :r72s
 
   resources :r7s

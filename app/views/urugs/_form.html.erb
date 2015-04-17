@@ -1,0 +1,23 @@
+<div class="maincontent">
+  <%= form_for(@urug) do |f| %>
+    <% if @urug.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@urug.errors.count, "error") %> prohibited this urug from being saved:</h2>
+
+        <ul>
+        <% @urug.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+      <div class="field">
+        <%= f.label :title %><br>
+      <%= f.text_field :title %>
+      </div>
+      <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
