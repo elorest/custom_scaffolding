@@ -1,0 +1,21 @@
+h1 Listing all the things: urug2s
+
+table
+  thead
+    tr
+      th Title
+      th
+      th
+      th
+
+  tbody
+    - @urug2s.each do |urug2|
+      tr
+        td = urug2.title
+        td = link_to 'Show', urug2
+        td = link_to 'Edit', edit_urug2_path(urug2)
+        td = link_to 'Destroy', urug2, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Urug2', new_urug2_path
